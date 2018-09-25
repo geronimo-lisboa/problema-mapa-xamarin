@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinMapas"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="XamarinMapas.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="edtBusca" Placeholder="Onde?" TextChanged="edtBusca_TextChanged"/>
+
+        <maps:Map WidthRequest="340" HeightRequest="400"
+                x:Name="MyMap"
+                IsShowingUser="True"
+                MapType="Street" />
+        <Label x:Name="LabelLat"></Label>
+        <Label x:Name="LabelLong"></Label>
+        
+        
+        <Button x:Name="ButtonGetLocation" Text="Where Am I?" Clicked="ButtonGetLocation_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>
